@@ -1,0 +1,214 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.headerIndex {
+    position: absolute;
+    bottom: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+    backdrop-filter: blur(16px);
+}
+
+.navBar li a{
+    text-decoration: none;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #F8C285 ;
+    cursor: pointer;
+}
+
+.navBar li a:hover{
+    color: white;
+    font-size: 1.900rem;
+
+}
+
+body{
+    background-image: url(../multimedia/escenario1.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.logoCIndex{
+    display: flex;
+    justify-content: left;
+    position: fixed;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+
+.logoIndex{
+    width: 300px;
+    height: 250px;
+}
+
+.logo{
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+h1{
+    font-size: 3.4375rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: .25rem .25rem 0 black;
+}
+
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.25rem;
+    text-shadow: .25rem .25rem 0 black;
+}
+
+.spotifyConteiner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 2.25rem;
+}
+
+.pentaDisc{
+    width: 76%;
+
+}
+
+.lbpvDisc{
+    width: 76%;
+}
+
+.showConteiner{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(2,50%);
+    justify-items: center;
+
+}
+
+.showConteiner div iframe{
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+
+.biografiaConteiner{
+    background-color: #6f869ac7;
+    margin: 5px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.biografia p{
+    font-size: 1.5625rem;
+    margin: 1.25rem 2.5rem 1.25rem .9375rem;
+    text-align: left;
+}
+
+.integrantes{
+    margin: 0px 1.5625rem;
+    text-align: center;
+}
+.integrantes li{
+    font-size: 1.5625rem;
+    font-weight: bold;
+    list-style: none;
+    line-height: 40px;
+    margin: 0px 0px 15px 0px;
+
+}
+
+.integrantes li p{
+    font-size: 1.25rem;
+}
+
+.redesConteiner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    color: #fff;
+    padding: 10px;
+}
+
+.footerIndex {
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media(max-width:768px){
+    header{
+        width: 768px;
+    }
+    iframe{
+        width: 356px;
+    }
+    .logo{
+        margin-top: 94px;
+        margin-bottom: -69px;
+    }
+}
+
+@media(max-width:426px){
+    header{
+        width: 425px;
+    }
+    .logo{
+        margin-top: 178px;
+        margin-bottom: -53px;
+    }
+    .showConteiner{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .biografiaConteiner{
+        display: block;
+        margin: 5px 0px;
+    }
+}
