@@ -1,0 +1,36 @@
+@import "../utilities/variables";
+@import "../utilities/maps";
+
+@mixin h1 {
+    font-size: map-get($font-sizes , large );
+    color: $colorTitulo;
+    text-align: center;
+    text-shadow: .25rem .25rem 0 $colorSombra;
+}
+
+@mixin h2{
+    font-size: map-get($font-sizes , medium );
+    text-align: center;
+    color: $colorSubTitulo;
+    margin-bottom: 1.25rem;
+    text-shadow: 0.25rem 0.25rem 0 $colorSombra;
+}
+
+@mixin logo{
+    width: 300px;
+    height: 250px;
+}
+
+@mixin header($position){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: $position;
+}
+
+@mixin footer{
+    color:#fff;
+    padding: 10px;
+    
+}

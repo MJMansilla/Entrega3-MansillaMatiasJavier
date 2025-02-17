@@ -1,0 +1,11 @@
+@import "../utilities/mixins";
+
+footer {
+    @include footer;
+}
+
+.footerIndex{
+    @include footer;
+    position: absolute;
+    bottom: 0;
+}

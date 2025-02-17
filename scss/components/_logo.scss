@@ -1,0 +1,10 @@
+@import "../utilities/mixins";
+
+.logoIndex{
+    @include logo;
+}
+
+.logo{
+    @extend .logoIndex;
+    margin-top: 50px;
+}

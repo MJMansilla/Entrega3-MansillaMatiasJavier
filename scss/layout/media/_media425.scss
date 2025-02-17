@@ -1,0 +1,32 @@
+@import "../../utilities/maps";
+
+@media(max-width:426px){
+    .navBar {
+        text-align: center;
+        gap: 15px;
+    }
+    .logo{
+        margin-top: 178px;
+        margin-bottom: -53px;
+    }
+    .showConteiner{
+        gap: 10px;
+    }
+    .spotifyConteiner{
+        align-content: flex-start;
+        iframe{
+            width: 425px;
+        }
+    }
+    .biografiaConteiner{
+        display: block;
+        margin: 5px 0px;
+    }
+    .fotosBanda{
+        margin-top: 1.875rem;
+        div{
+            flex: 1 1 calc(50% - 10px); 
+            max-width: calc(50% - 10px);
+        }
+    }
+}

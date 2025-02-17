@@ -1,214 +1,315 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-header {
-    position: fixed;
-    top: 2.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+h1 {
+  font-size: 3.4375rem;
+  color: white;
+  text-align: center;
+  text-shadow: 0.25rem 0.25rem 0 black;
+  -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(1, 0, 0, 1);
+  animation: slide-in-blurred-top 0.6s cubic-bezier(1, 0, 0, 1);
 }
 
-.headerIndex {
-    position: absolute;
-    bottom: 2.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-end;
+@-webkit-keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 1.25rem;
+  text-shadow: 0.25rem 0.25rem 0 black;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.logoCIndex {
+  display: flex;
+  justify-content: left;
+  position: fixed;
+}
+
+.spotifyConteiner {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 2.25rem;
+}
+.spotifyConteiner section {
+  width: 76%;
+}
+
+.showConteiner {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: auto;
+  justify-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.showConteiner div {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+.showConteiner div iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: 3px solid black;
+  border-radius: 10%;
+}
+
+.fotosBanda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.fotosBanda div {
+  flex: 1 1 calc(12.5% - 10px);
+  max-width: calc(12.5% - 10px);
+}
+.fotosBanda img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.biografiaConteiner {
+  background-color: rgba(111, 134, 154, 0.7803921569);
+  margin: 5px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.biografiaConteiner .biografia p {
+  font-size: 1.5625rem;
+  color: #f9f871;
+  margin: 1.25rem 2.5rem 1.25rem 0.9375rem;
+  text-align: left;
+}
+.biografiaConteiner .integrantes {
+  margin: 0px 1.5625rem;
+  text-align: center;
+}
+.biografiaConteiner .integrantes li {
+  font-size: 1.5625rem;
+  color: #0c2535;
+  font-weight: bold;
+  list-style: none;
+  line-height: 40px;
+  margin: 0px 0px 15px 0px;
+}
+.biografiaConteiner .integrantes li p {
+  font-size: 0.9375rem;
+  color: #e79b25;
+  font-weight: normal;
+}
+
+.redesConteiner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.logoIndex, .logo {
+  width: 300px;
+  height: 250px;
+}
+
+.logo {
+  margin-top: 50px;
 }
 
 .navBar {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    list-style: none;
-    flex-wrap: wrap;
-    backdrop-filter: blur(16px);
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+  backdrop-filter: blur(16px);
+}
+.navBar li a {
+  text-decoration: none;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #F8C285;
+  cursor: pointer;
+}
+.navBar li a:hover {
+  color: white;
+  font-size: 1.9rem;
 }
 
-.navBar li a{
-    text-decoration: none;
-    font-size: 1.875rem;
-    font-weight: bold;
-    color: #F8C285 ;
-    cursor: pointer;
-}
-
-.navBar li a:hover{
-    color: white;
-    font-size: 1.900rem;
-
-}
-
-body{
-    background-image: url(../multimedia/escenario1.jpg) ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    font-family: sans-serif;
-}
-
-.logoCIndex{
-    display: flex;
-    justify-content: left;
-    position: fixed;
-}
-
-.logoContainer{
-    display: flex;
-    justify-content: center;
-}
-
-
-.logoIndex{
-    width: 300px;
-    height: 250px;
-}
-
-.logo{
-    width: 300px;
-    height: 250px;
-    margin-top: 50px;
-}
-
-h1{
-    font-size: 3.4375rem;
-    color: #fff;
-    text-align: center;
-    text-shadow: .25rem .25rem 0 black;
-}
-
-h2{
-    font-size: 2.5rem;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 1.25rem;
-    text-shadow: .25rem .25rem 0 black;
-}
-
-.spotifyConteiner{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    gap: 2.25rem;
-}
-
-.pentaDisc{
-    width: 76%;
-
-}
-
-.lbpvDisc{
-    width: 76%;
-}
-
-.showConteiner{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,50%);
-    grid-template-rows: repeat(2,50%);
-    justify-items: center;
-
-}
-
-.showConteiner div iframe{
-    border: 3px solid black;
-    border-radius: 10%;
-}
-
-
-.biografiaConteiner{
-    background-color: #6f869ac7;
-    margin: 5px 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.biografia p{
-    font-size: 1.5625rem;
-    margin: 1.25rem 2.5rem 1.25rem .9375rem;
-    text-align: left;
-}
-
-.integrantes{
-    margin: 0px 1.5625rem;
-    text-align: center;
-}
-.integrantes li{
-    font-size: 1.5625rem;
-    font-weight: bold;
-    list-style: none;
-    line-height: 40px;
-    margin: 0px 0px 15px 0px;
-
-}
-
-.integrantes li p{
-    font-size: 1.25rem;
-}
-
-.redesConteiner{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.form{
-    display: flex;
-    justify-content: center;
+body {
+  background-image: url(../multimedia/escenario1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  font-family: sans-serif;
 }
 
 footer {
-    color: #fff;
-    padding: 10px;
+  color: #fff;
+  padding: 10px;
 }
 
 .footerIndex {
-    color: #fff;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
 }
 
-@media(max-width:768px){
-    header{
-        width: 768px;
-    }
-    iframe{
-        width: 356px;
-    }
-    .logo{
-        margin-top: 94px;
-        margin-bottom: -69px;
-    }
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 2.5rem;
 }
 
-@media(max-width:426px){
-    header{
-        width: 425px;
-    }
-    .logo{
-        margin-top: 178px;
-        margin-bottom: -53px;
-    }
-    .showConteiner{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-    .biografiaConteiner{
-        display: block;
-        margin: 5px 0px;
-    }
+.headerIndex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 2.5rem;
+  align-items: flex-end;
 }
+
+@media (max-width: 426px) {
+  .navBar {
+    text-align: center;
+    gap: 15px;
+  }
+  .logo {
+    margin-top: 178px;
+    margin-bottom: -53px;
+  }
+  .showConteiner {
+    gap: 10px;
+  }
+  .spotifyConteiner {
+    align-content: flex-start;
+  }
+  .spotifyConteiner iframe {
+    width: 425px;
+  }
+  .biografiaConteiner {
+    display: block;
+    margin: 5px 0px;
+  }
+  .fotosBanda {
+    margin-top: 1.875rem;
+  }
+  .fotosBanda div {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 94px;
+    margin-bottom: -69px;
+  }
+  .fotosBanda {
+    margin-top: 1.875rem;
+  }
+  .fotosBanda div {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+  }
+  .showConteiner {
+    grid-template-columns: 100%;
+  }
+}
+.fotosBanda img {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out;
+}
+.fotosBanda img:hover {
+  filter: grayscale(0%);
+}
+
+.fotosBanda div img:hover {
+  -webkit-animation: scale-up-center 0.4s both;
+  animation: scale-up-center 0.4s both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

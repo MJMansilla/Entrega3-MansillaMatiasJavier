@@ -1,0 +1,18 @@
+@import "../../utilities/maps";
+
+@media(max-width:768px){
+    .logo{
+        margin-top: 94px;
+        margin-bottom: -69px;
+    }
+    .fotosBanda{
+        margin-top: 1.875rem;
+        div{
+            flex: 1 1 calc(25% - 10px);
+            max-width: calc(25% - 10px);
+        }
+    }
+    .showConteiner{
+        grid-template-columns: 100%;
+    }
+}
