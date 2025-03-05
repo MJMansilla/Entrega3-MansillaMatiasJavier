@@ -162,6 +162,51 @@ h2 {
   justify-content: center;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 50px;
+}
+
+.name-label,
+.email-label {
+  margin-top: 10px;
+}
+
+.name-input,
+.email-input {
+  width: 12.5rem;
+}
+
+.comment-container {
+  width: 50%;
+  display: flex;
+  justify-self: center;
+}
+
+.comment-textarea {
+  height: 200px;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: center;
+}
+
+.switch-input {
+  margin: 15px;
+}
+
+.switch-label {
+  margin: 10px 10px;
+}
+
+.submit-button {
+  display: flex;
+  margin: 5px;
+}
+
 .logoIndex, .logo {
   width: 300px;
   height: 250px;
@@ -261,6 +306,26 @@ header {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
   }
+  .redesConteiner {
+    margin-left: 50px;
+  }
+  .redesConteiner a img {
+    width: 50%;
+    height: auto;
+  }
+  .form-container {
+    flex-direction: column;
+    gap: 0rem;
+    justify-self: center;
+  }
+  .comment-container {
+    justify-self: auto;
+    width: 100%;
+  }
+  .name-input,
+  .email-input {
+    width: 26.25rem;
+  }
 }
 @media (max-width: 768px) {
   .logo {
@@ -276,6 +341,23 @@ header {
   }
   .showConteiner {
     grid-template-columns: 100%;
+  }
+  .redesConteiner a img {
+    width: 75%;
+    height: auto;
+  }
+  .form-container {
+    flex-direction: column;
+    gap: 0rem;
+    justify-self: center;
+  }
+  .comment-container {
+    justify-self: auto;
+    width: 100%;
+  }
+  .name-input,
+  .email-input {
+    width: 26.25rem;
   }
 }
 .fotosBanda img {

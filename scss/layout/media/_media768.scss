@@ -15,4 +15,26 @@
     .showConteiner{
         grid-template-columns: 100%;
     }
+    .redesConteiner{
+        a{
+            img{
+                width: 75%;
+                height: auto;
+            }
+        }
+    }
+    
+    .form-container{
+        flex-direction: column;
+        gap: 0rem;
+        justify-self: center;
+    }
+    .comment-container{
+        justify-self: auto;
+        width: 100%;
+    }
+    .name-input,
+    .email-input {
+        width: 26.25rem;
+}
 }

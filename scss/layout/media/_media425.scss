@@ -29,4 +29,26 @@
             max-width: calc(50% - 10px);
         }
     }
+    .redesConteiner{
+        margin-left: 50px;
+        a{
+            img{
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+    .form-container{
+        flex-direction: column;
+        gap: 0rem;
+        justify-self: center;
+    }
+    .comment-container{
+        justify-self: auto;
+        width: 100%;
+    }
+    .name-input,
+    .email-input {
+        width: 26.25rem;
+}
 }
